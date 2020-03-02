@@ -7,5 +7,5 @@ class MP3Importer
   end 
   
   def files
-    Dir.entries(self.path).select{
+    Dir.entries(self.path).select{|file| file.each_with
 end 
