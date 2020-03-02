@@ -21,10 +21,14 @@ class Artist
     song.artist = self 
   end 
   
-  def self.find_or_create_by_name(name)
+  def self.find_or_create_by_name(artist_name)
     if self.find(artist_name)
       self.find(artist_name)
-    else self.new(name)
+    else self.new(artist_name)
     end 
+  end
+  
+  def artist_name
+    self.find {|artist| artist.name == artist_name}
   end 
 end 
