@@ -22,5 +22,5 @@ class Artist
   end 
   
   def self.find_or_create_by_name(name)
-    if self.find {|song| 
+    if self.find {|artist| artist.name == artist_name} 
 end 
